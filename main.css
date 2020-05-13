@@ -1,0 +1,13 @@
+body{
+    width:600px;
+    padding:1rem;
+  }
+button{
+    border: 1px solid skyblue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px;
+    
+}
+span{
+    padding: 6px;
+    font-size: 15px;
+    
+}
