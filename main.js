@@ -120,6 +120,10 @@ function paint(url,title,index){
                     
                 })
 
+                input.addEventListener('click',(e)=>{
+                    input.remove()
+                })
+
             }
         })
 
