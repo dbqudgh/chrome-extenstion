@@ -115,7 +115,7 @@ function paint(url,title,index){
                     //ui부분도 입력했던값으로 바꿔줌
                     span.textContent = input.value
                     
-                    //값이 다 변경됬으니 input 태그 제거
+                    // input 태그 제거
                     input.remove();
                     
                 })
