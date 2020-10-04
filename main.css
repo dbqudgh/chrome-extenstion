@@ -30,3 +30,7 @@ input::placeholder{
     display: none;
 }
 
+
+.hide{
+    display:none;
+}

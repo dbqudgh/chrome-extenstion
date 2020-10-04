@@ -2,9 +2,9 @@ const button =  document.querySelector('.add'); //버튼
 const div = document.querySelector('.list'); // div 노드
 
 
-document.addEventListener('contextmenu', function() {
-    event.preventDefault();
-  });
+// document.addEventListener('contextmenu', function() {
+//     event.preventDefault();
+//   });
 
 
 const LS = 'ls' //키값
@@ -182,8 +182,6 @@ function bookMarkClick(e){
 
 // function init 함수
 function init(){
-
-    
     //정보 불러오기
     load()
 
