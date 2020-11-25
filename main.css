@@ -1,43 +1,45 @@
-body{
-    width:600px;
-    padding:1rem;
-  }
-button{
-    border: 1px solid skyblue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px;
-    
+body {
+  width: 600px;
+  padding: 1rem;
 }
-span{
-    padding: 6px;
-    font-size: 15px;
-    
-
-}
-input{
-    margin-left: 10px; 
-    margin-top: 10px;
-    padding: 5px;
-    border: 1px solid skyblue;
-    font-size: 15px;
-    margin-right: 10px;
-
-}
-input::placeholder{
-    color: black;
-    font-size: 15px;
-    position: relative;
+button {
+  cursor: pointer;
+  border: 1px solid skyblue;
+  background-color: rgba(0, 0, 0, 0);
+  color: skyblue;
+  padding: 5px;
 }
 
-.block{
-    display: none;
+button:hover {
+  background-color: rgb(223, 223, 223);
+  transition: background 1s ease;
+}
+span {
+  padding: 6px;
+  font-size: 15px;
+}
+input {
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid skyblue;
+  font-size: 15px;
+  margin-right: 10px;
+}
+input::placeholder {
+  color: black;
+  font-size: 15px;
+  position: relative;
 }
 
-
-.hide{
-    display:none;
+.block {
+  display: none;
 }
 
+.hide {
+  display: none;
+}
 
-
-.span{
-    user-select: none;
+.span {
+  user-select: none;
 }
