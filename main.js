@@ -2,9 +2,9 @@ const button =  document.querySelector('.add'); //버튼
 const div = document.querySelector('.list'); // div 노드
 
 
-// document.addEventListener('contextmenu', function() {
+// document.addEventListener('contextmenu',function(event){
 //     event.preventDefault();
-//   });
+// })
 
 
 const LS = 'ls' //키값
@@ -83,20 +83,35 @@ function paint(url,title,index){
                                 
 
                 //input 태그 만들기
-                const input = document.createElement('input') 
+                const input = document.createElement('input')
+                //수정 버튼 만들기
+                const button = document.createElement('button')
+                
                                    
                 //value 값은 기본 스펜 텍스트 값
                 input.value = span.textContent
                 input.placeholder = '수정'
+                
+                button.textContent = '수정'
+
                 //스타일 지정
                 input.style = ' width: 500px;'
 
 
-                //input 태그를 업로드해줌
-                ld.appendChild(input)    
+
+
+                const haveInput = ld.querySelector('input')
+                
+                if(haveInput){
+                    return
+                }
+
+                //input 태그를 업로드해줌\
+                ld.appendChild(input)  
+                ld.appendChild(button)
+                
                 //텍스트 자동 선택                
                 input.select();
-
 
                 //input 값이 입력되면 or 바뀌면
                 input.addEventListener('change',(e)=>{
@@ -115,14 +130,26 @@ function paint(url,title,index){
                     //ui부분도 입력했던값으로 바꿔줌
                     span.textContent = input.value
                     
-                    // input 태그 제거
-                    input.remove();
                     
                 })
 
-                input.addEventListener('click',(e)=>{
-                    input.remove()
+
+                input.addEventListener('keyup',(event)=>{
+
+                    if (event.keyCode === 13){
+                        input.remove();
+                        button.remove();
+                    }
+
                 })
+
+                button.addEventListener('click',(e)=>{
+                    e.preventDefault();
+                    input.remove();
+                    button.remove();
+                })
+
+                
 
             }
         })
